@@ -115,11 +115,27 @@ The website uses Unsplash images. You can replace them with custom images by:
 
 ## Deployment
 
-This Next.js application can be deployed to:
+### Quick Deploy to Vercel (Recommended)
 
-- **Vercel** (recommended): Connect your GitHub repository for automatic deployments
-- **Netlify**: Support for Next.js with serverless functions
-- **Any Node.js hosting**: Run `npm run build` and `npm start`
+This site is fully configured and ready to deploy to Vercel:
+
+1. Go to [vercel.com](https://vercel.com) and sign in
+2. Click "Add New Project"
+3. Import from Bitbucket: `trukraft/stirring-dirt-excavation`
+4. Click "Deploy" (all settings auto-configured)
+5. Your site will be live in ~2 minutes! 🚀
+
+**📖 For detailed deployment instructions, see [DEPLOYMENT.md](./DEPLOYMENT.md)**
+
+### Other Hosting Options
+
+- **Netlify**: Supports Next.js with automatic deployments
+- **Cloudflare Pages**: Edge-optimized hosting
+- **Traditional VPS**: Run `npm run build` and `npm start`
+
+### Repository
+
+- **Bitbucket**: https://bitbucket.org/trukraft/stirring-dirt-excavation
 
 ## Browser Support
 
