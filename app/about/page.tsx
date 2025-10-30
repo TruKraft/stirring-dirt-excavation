@@ -40,10 +40,10 @@ export default function About() {
               </h2>
               <div className="space-y-4 text-lg text-gray-600">
                 <p>
-                  Stirring Dirt Excavation is more than just a business—it's a commitment to serving the Logan, Utah community with integrity and excellence. Owner and operator Colton Boyack started this company with a simple philosophy: do honest work at fair prices, and always treat customers with respect.
+                  Stirring Dirt Excavation is more than just a business—it&apos;s a commitment to serving the Logan, Utah community with integrity and excellence. Owner and operator Colton Boyack started this company with a simple philosophy: do honest work at fair prices, and always treat customers with respect.
                 </p>
                 <p>
-                  Growing up in Cache Valley, Colton learned the value of hard work and community from an early age. Those lessons shaped his approach to business. When you hire Stirring Dirt Excavation, you're not getting a faceless corporation—you're working directly with Colton, who takes personal responsibility for every project.
+                  Growing up in Cache Valley, Colton learned the value of hard work and community from an early age. Those lessons shaped his approach to business. When you hire Stirring Dirt Excavation, you&apos;re not getting a faceless corporation—you&apos;re working directly with Colton, who takes personal responsibility for every project.
                 </p>
                 <p>
                   By keeping the business lean and avoiding unnecessary overhead, Colton can offer competitive pricing without sacrificing quality. He operates the equipment himself, oversees every job personally, and ensures that the work meets his exacting standards before calling it complete.
