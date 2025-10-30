@@ -206,10 +206,10 @@ export default function Services() {
       <section className="bg-dark text-white py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">
-            Let's Discuss Your Project
+            Let&apos;s Discuss Your Project
           </h2>
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            Contact us today for a free quote. We're ready to help bring your vision to life.
+            Contact us today for a free quote. We&apos;re ready to help bring your vision to life.
           </p>
           <a
             href="tel:+1234567890"

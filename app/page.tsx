@@ -195,7 +195,7 @@ export default function Home() {
                 Stirring Dirt Excavation is a family-owned business built on strong values and genuine craftsmanship. Owner and operator Colton Boyack brings a personal touch to every project, working directly with customers to ensure satisfaction from start to finish.
               </p>
               <p className="text-lg text-gray-600 mb-6">
-                By keeping operations lean and efficient, we're able to offer competitive pricing without compromising on quality. You won't deal with layers of management—you'll work directly with Colton, ensuring clear communication and accountability.
+                By keeping operations lean and efficient, we&apos;re able to offer competitive pricing without compromising on quality. You won&apos;t deal with layers of management—you&apos;ll work directly with Colton, ensuring clear communication and accountability.
               </p>
               <Link
                 href="/about"
@@ -253,7 +253,7 @@ export default function Home() {
             Ready to Get Started?
           </h2>
           <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-            Contact us today for a free quote. We'll discuss your project and provide honest, transparent pricing.
+            Contact us today for a free quote. We&apos;ll discuss your project and provide honest, transparent pricing.
           </p>
           <a
             href="tel:+1234567890"

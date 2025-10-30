@@ -77,7 +77,7 @@ export default function About() {
                 <h3 className="text-2xl font-bold text-gray-900">Honesty</h3>
               </div>
               <p className="text-gray-600">
-                We believe in transparent pricing and straightforward communication. When we provide a quote, that's what you'll pay—no surprise fees or hidden costs. If we encounter an unexpected issue, we'll discuss it with you before proceeding.
+                We believe in transparent pricing and straightforward communication. When we provide a quote, that&apos;s what you&apos;ll pay—no surprise fees or hidden costs. If we encounter an unexpected issue, we&apos;ll discuss it with you before proceeding.
               </p>
             </div>
 
@@ -91,7 +91,7 @@ export default function About() {
                 <h3 className="text-2xl font-bold text-gray-900">Hard Work</h3>
               </div>
               <p className="text-gray-600">
-                No job is beneath us, and no challenge is too great. Whether it's preparing a small yard or tackling a major demolition, we approach every project with the same dedication and attention to detail. We don't cut corners, and we don't quit until the job is done right.
+                No job is beneath us, and no challenge is too great. Whether it&apos;s preparing a small yard or tackling a major demolition, we approach every project with the same dedication and attention to detail. We don&apos;t cut corners, and we don&apos;t quit until the job is done right.
               </p>
             </div>
 
@@ -105,7 +105,7 @@ export default function About() {
                 <h3 className="text-2xl font-bold text-gray-900">Reliability</h3>
               </div>
               <p className="text-gray-600">
-                When we commit to a timeline, we honor it. When we say we'll be there, we show up. Your time is valuable, and we respect that. You can count on us to deliver consistent, dependable service from the initial quote to the final cleanup.
+                When we commit to a timeline, we honor it. When we say we&apos;ll be there, we show up. Your time is valuable, and we respect that. You can count on us to deliver consistent, dependable service from the initial quote to the final cleanup.
               </p>
             </div>
 
@@ -119,7 +119,7 @@ export default function About() {
                 <h3 className="text-2xl font-bold text-gray-900">Community Focus</h3>
               </div>
               <p className="text-gray-600">
-                We're proud to serve Logan and the surrounding Cache Valley area. This is our home, and your neighbors are our neighbors. We're invested in the success and beauty of our community, and we treat every property as if it were our own.
+                We&apos;re proud to serve Logan and the surrounding Cache Valley area. This is our home, and your neighbors are our neighbors. We&apos;re invested in the success and beauty of our community, and we treat every property as if it were our own.
               </p>
             </div>
           </div>
@@ -134,7 +134,7 @@ export default function About() {
               Serving Logan and Cache Valley
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              We're proud to provide excavation services throughout Cache Valley and the surrounding areas. From Logan to the surrounding communities, we're here to help.
+              We&apos;re proud to provide excavation services throughout Cache Valley and the surrounding areas. From Logan to the surrounding communities, we&apos;re here to help.
             </p>
           </div>
 
@@ -184,7 +184,7 @@ export default function About() {
             Experience the Difference
           </h2>
           <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-            Ready to work with a contractor who puts honesty and quality first? Let's talk about your project.
+            Ready to work with a contractor who puts honesty and quality first? Let&apos;s talk about your project.
           </p>
           <a
             href="tel:+1234567890"
