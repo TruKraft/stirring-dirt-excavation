@@ -35,10 +35,11 @@ A professional website for Stirring Dirt Excavation, a family-owned excavation b
 
 ### Installation
 
-1. Clone the repository or navigate to the project directory:
+1. Clone the repository:
 
 ```bash
-cd "Test Cursor"
+git clone https://bitbucket.org/trukraft/stirring-dirt-excavation.git
+cd stirring-dirt-excavation
 ```
 
 2. Install dependencies:
