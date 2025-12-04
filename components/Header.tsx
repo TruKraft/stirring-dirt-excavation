@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 
 export default function Header() {
@@ -13,27 +14,20 @@ export default function Header() {
   ];
 
   return (
-    <header className="bg-dark text-white sticky top-0 z-50 shadow-lg">
+    <header className="bg-dark text-white sticky top-0 left-0 right-0 z-50 shadow-lg">
       <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8" aria-label="Top">
         <div className="flex w-full items-center justify-between py-4 lg:py-6">
           {/* Logo/Brand */}
           <div className="flex items-center">
             <Link href="/" className="flex items-center space-x-3">
-              <div className="flex items-center justify-center w-12 h-12 bg-primary rounded-lg">
-                <svg
-                  className="w-8 h-8 text-white"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
-                  />
-                </svg>
+              <div className="relative w-24 h-12 lg:w-32 lg:h-16 flex-shrink-0">
+                <Image
+                  src="/stirring dirt-logo.png"
+                  alt="Stirring Dirt Excavation Logo"
+                  fill
+                  className="object-contain"
+                  priority
+                />
               </div>
               <div>
                 <h1 className="text-xl lg:text-2xl font-bold text-white">

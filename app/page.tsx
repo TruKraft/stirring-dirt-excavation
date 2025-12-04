@@ -1,61 +1,44 @@
 import Image from "next/image";
 import Link from "next/link";
+import AnchorLink from "@/components/AnchorLink";
 
 export default function Home() {
   const services = [
     {
       title: "Yard Preparation",
       description: "Expert land preparation for your next landscaping project. We ensure your yard is leveled, graded, and ready for whatever comes next.",
-      icon: (
-        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-        </svg>
-      ),
+      image: "https://images.unsplash.com/photo-1592595896551-12b371d546d5?q=80&w=2070",
+      slug: "yard-preparation",
     },
     {
       title: "Sod Installation",
       description: "Transform your property with professional sod installation. Get an instant, lush green lawn that's ready to enjoy right away.",
-      icon: (
-        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
-        </svg>
-      ),
+      image: "https://images.unsplash.com/photo-1558904541-efa843a96f01?q=80&w=2070",
+      slug: "sod-installation",
     },
     {
       title: "Decorative Rock Work",
       description: "Beautiful decorative rock installations that add character and low-maintenance elegance to your landscape design.",
-      icon: (
-        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
-        </svg>
-      ),
+      image: "/istockphoto-2155046393-612x612.jpg",
+      slug: "decorative-rock-work",
     },
     {
       title: "Driveway Grading & Gravel Restoration",
       description: "Restore your driveway to smooth, even condition. We grade and resurface gravel driveways for improved drainage and longevity.",
-      icon: (
-        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
-        </svg>
-      ),
+      image: "/pexels-curtis-adams-1694007-3935333.jpg",
+      slug: "driveway-grading-gravel-restoration",
     },
     {
       title: "Demolition",
       description: "Safe and efficient demolition services for structures, concrete, and more. We handle projects of all sizes with care and precision.",
-      icon: (
-        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
-        </svg>
-      ),
+      image: "/pexels-life-of-pix-2489.jpg",
+      slug: "demolition",
     },
     {
       title: "Junk Removal & Hauling",
       description: "Fast, reliable junk removal and hauling services. We'll clear out unwanted items and debris, leaving your property clean and organized.",
-      icon: (
-        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4" />
-        </svg>
-      ),
+      image: "https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?q=80&w=2070",
+      slug: "junk-removal-hauling",
     },
   ];
 
@@ -152,20 +135,29 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <div
+              <AnchorLink
                 key={index}
-                className="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition-shadow duration-300"
+                href={`/services#${service.slug}`}
+                className="group relative h-64 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:scale-105 block"
               >
-                <div className="flex items-center justify-center w-16 h-16 bg-primary text-white rounded-lg mb-4">
-                  {service.icon}
+                <div className="absolute inset-0">
+                  <Image
+                    src={service.image}
+                    alt={service.title}
+                    fill
+                    className="object-cover group-hover:scale-110 transition-transform duration-300"
+                  />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                  {service.title}
-                </h3>
-                <p className="text-gray-600">
-                  {service.description}
-                </p>
-              </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+                <div className="relative h-full flex flex-col justify-end p-6 text-white">
+                  <h3 className="text-xl font-semibold mb-2 group-hover:text-primary transition-colors duration-300">
+                    {service.title}
+                  </h3>
+                  <p className="text-sm text-gray-200 line-clamp-2">
+                    {service.description}
+                  </p>
+                </div>
+              </AnchorLink>
             ))}
           </div>
 

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Footer() {
   return (
@@ -8,21 +9,13 @@ export default function Footer() {
           {/* Company Info */}
           <div>
             <div className="flex items-center space-x-3 mb-4">
-              <div className="flex items-center justify-center w-10 h-10 bg-primary rounded-lg">
-                <svg
-                  className="w-6 h-6 text-white"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
-                  />
-                </svg>
+              <div className="relative w-10 h-10 lg:w-12 lg:h-12 flex-shrink-0">
+                <Image
+                  src="/stirring dirt-logo.png"
+                  alt="Stirring Dirt Excavation Logo"
+                  fill
+                  className="object-contain"
+                />
               </div>
               <h3 className="text-lg font-bold">Stirring Dirt Excavation</h3>
             </div>
@@ -114,8 +107,8 @@ export default function Footer() {
                     d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                   />
                 </svg>
-                <a href="mailto:info@stirringdirt.com" className="text-gray-400 hover:text-primary transition-colors">
-                  info@stirringdirt.com
+                <a href="mailto:Stirringdirtexcavation@gmail.com" className="text-gray-400 hover:text-primary transition-colors">
+                  Stirringdirtexcavation@gmail.com
                 </a>
               </li>
             </ul>

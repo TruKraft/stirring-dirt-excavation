@@ -18,6 +18,7 @@ export default function Services() {
         "Foundation preparation for structures",
       ],
       image: "https://images.unsplash.com/photo-1592595896551-12b371d546d5?q=80&w=2070",
+      slug: "yard-preparation",
     },
     {
       title: "Sod Installation",
@@ -30,6 +31,7 @@ export default function Services() {
         "Seam blending for natural appearance",
       ],
       image: "https://images.unsplash.com/photo-1558904541-efa843a96f01?q=80&w=2070",
+      slug: "sod-installation",
     },
     {
       title: "Decorative Rock Work",
@@ -42,6 +44,7 @@ export default function Services() {
         "Landscape fabric installation",
       ],
       image: "/istockphoto-2155046393-612x612.jpg",
+      slug: "decorative-rock-work",
     },
     {
       title: "Driveway Grading & Gravel Restoration",
@@ -54,6 +57,7 @@ export default function Services() {
         "Crown restoration for water runoff",
       ],
       image: "/pexels-curtis-adams-1694007-3935333.jpg",
+      slug: "driveway-grading-gravel-restoration",
     },
     {
       title: "Demolition",
@@ -66,6 +70,7 @@ export default function Services() {
         "Site cleanup and leveling",
       ],
       image: "/pexels-life-of-pix-2489.jpg",
+      slug: "demolition",
     },
     {
       title: "Junk Removal & Hauling",
@@ -78,6 +83,7 @@ export default function Services() {
         "Responsible disposal and recycling",
       ],
       image: "https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?q=80&w=2070",
+      slug: "junk-removal-hauling",
     },
   ];
 
@@ -104,7 +110,8 @@ export default function Services() {
             {services.map((service, index) => (
               <div
                 key={index}
-                className={`grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center ${
+                id={service.slug}
+                className={`grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center scroll-mt-24 ${
                   index % 2 === 1 ? "lg:flex-row-reverse" : ""
                 }`}
               >
