@@ -30,10 +30,10 @@ export default function Header() {
                 />
               </div>
               <div>
-                <h1 className="text-xl lg:text-2xl font-bold text-white">
+                <h1 className="text-xl lg:text-2xl font-bold text-gray-900">
                   Stirring Dirt Excavation
                 </h1>
-                <p className="text-xs text-gray-300 hidden sm:block">Logan, Utah</p>
+                <p className="text-xs text-gray-500 hidden sm:block">Logan, Utah</p>
               </div>
             </Link>
           </div>
@@ -44,7 +44,7 @@ export default function Header() {
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-base font-medium text-white hover:text-primary transition-colors duration-200"
+                className="text-base font-medium text-gray-900 hover:text-primary transition-colors duration-200"
               >
                 {item.name}
               </Link>
