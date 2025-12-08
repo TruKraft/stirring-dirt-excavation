@@ -7,7 +7,7 @@ export default function Home() {
     {
       title: "Yard Preparation",
       description: "Expert land preparation for your next landscaping project. We ensure your yard is leveled, graded, and ready for whatever comes next.",
-      image: "/yard.png",
+      image: "/yard.png" ,
       slug: "yard-preparation",
     },
     {
