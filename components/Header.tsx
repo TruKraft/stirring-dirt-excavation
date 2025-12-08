@@ -19,7 +19,7 @@ export default function Header() {
         <div className="flex w-full items-center justify-between py-4 lg:py-6">
           {/* Logo/Brand */}
           <div className="flex items-center">
-            <Link href="/" className="flex items-center space-x-3">
+            <Link href="/" className="flex items-center">
               <div className="relative w-24 h-12 lg:w-32 lg:h-16 flex-shrink-0">
                 <Image
                   src="/stirring dirt-logo.png"
@@ -28,12 +28,6 @@ export default function Header() {
                   className="object-contain"
                   priority
                 />
-              </div>
-              <div>
-                <h1 className="text-xl lg:text-2xl font-bold text-gray-900">
-                  Stirring Dirt Excavation
-                </h1>
-                <p className="text-xs text-gray-500 hidden sm:block">Logan, Utah</p>
               </div>
             </Link>
           </div>
