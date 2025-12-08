@@ -30,7 +30,7 @@ export default function Services() {
         "Initial watering and care guidance",
         "Seam blending for natural appearance",
       ],
-      image: "https://images.unsplash.com/photo-1558904541-efa843a96f01?q=80&w=2070",
+      image: "/sod.png",
       slug: "sod-installation",
     },
     {
@@ -56,7 +56,7 @@ export default function Services() {
         "Drainage improvement",
         "Crown restoration for water runoff",
       ],
-      image: "/pexels-curtis-adams-1694007-3935333.jpg",
+      image: "/driveway.png",
       slug: "driveway-grading-gravel-restoration",
     },
     {
@@ -69,7 +69,7 @@ export default function Services() {
         "Safe debris handling",
         "Site cleanup and leveling",
       ],
-      image: "/pexels-life-of-pix-2489.jpg",
+      image: "/demolition.png",
       slug: "demolition",
     },
     {
@@ -82,7 +82,7 @@ export default function Services() {
         "General junk cleanup",
         "Responsible disposal and recycling",
       ],
-      image: "https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?q=80&w=2070",
+      image: "/junk-removal.png",
       slug: "junk-removal-hauling",
     },
   ];

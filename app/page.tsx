@@ -13,7 +13,7 @@ export default function Home() {
     {
       title: "Sod Installation",
       description: "Transform your property with professional sod installation. Get an instant, lush green lawn that's ready to enjoy right away.",
-      image: "https://images.unsplash.com/photo-1558904541-efa843a96f01?q=80&w=2070",
+      image: "/sod.png",
       slug: "sod-installation",
     },
     {
@@ -25,19 +25,19 @@ export default function Home() {
     {
       title: "Driveway Grading & Gravel Restoration",
       description: "Restore your driveway to smooth, even condition. We grade and resurface gravel driveways for improved drainage and longevity.",
-      image: "/pexels-curtis-adams-1694007-3935333.jpg",
+      image: "/driveway.png",
       slug: "driveway-grading-gravel-restoration",
     },
     {
       title: "Demolition",
       description: "Safe and efficient demolition services for structures, concrete, and more. We handle projects of all sizes with care and precision.",
-      image: "/pexels-life-of-pix-2489.jpg",
+      image: "/demolition.png",
       slug: "demolition",
     },
     {
       title: "Junk Removal & Hauling",
       description: "Fast, reliable junk removal and hauling services. We'll clear out unwanted items and debris, leaving your property clean and organized.",
-      image: "https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?q=80&w=2070",
+      image: "/junk-removal.png",
       slug: "junk-removal-hauling",
     },
   ];
