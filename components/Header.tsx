@@ -14,7 +14,7 @@ export default function Header() {
   ];
 
   return (
-    <header className="bg-dark text-white sticky top-0 left-0 right-0 z-50 shadow-lg">
+    <header className="bg-white sticky top-0 z-50 shadow-lg">
       <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8" aria-label="Top">
         <div className="flex w-full items-center justify-between py-4 lg:py-6">
           {/* Logo/Brand */}
@@ -30,10 +30,10 @@ export default function Header() {
                 />
               </div>
               <div>
-                <h1 className="text-xl lg:text-2xl font-bold text-white">
+                <h1 className="text-xl lg:text-2xl font-bold text-gray-900">
                   Stirring Dirt Excavation
                 </h1>
-                <p className="text-xs text-gray-400 hidden sm:block">Logan, Utah</p>
+                <p className="text-xs text-gray-600 hidden sm:block">Logan, Utah</p>
               </div>
             </Link>
           </div>
@@ -44,7 +44,7 @@ export default function Header() {
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-base font-medium text-white hover:text-primary transition-colors duration-200"
+                className="text-base font-medium text-gray-900 hover:text-primary transition-colors duration-200"
               >
                 {item.name}
               </Link>
@@ -61,7 +61,7 @@ export default function Header() {
           <div className="flex lg:hidden">
             <button
               type="button"
-              className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-white"
+              className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-900"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             >
               <span className="sr-only">Open main menu</span>
@@ -106,7 +106,7 @@ export default function Header() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-dark-lighter"
+                  className="block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-100"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {item.name}
