@@ -38,7 +38,7 @@ A professional website for Stirring Dirt Excavation, a family-owned excavation b
 1. Clone the repository:
 
 ```bash
-git clone https://bitbucket.org/trukraft/stirring-dirt-excavation.git
+git clone <repository-url>
 cd stirring-dirt-excavation
 ```
 
@@ -122,7 +122,7 @@ This site is fully configured and ready to deploy to Vercel:
 
 1. Go to [vercel.com](https://vercel.com) and sign in
 2. Click "Add New Project"
-3. Import from Bitbucket: `trukraft/stirring-dirt-excavation`
+3. Import your repository
 4. Click "Deploy" (all settings auto-configured)
 5. Your site will be live in ~2 minutes! 🚀
 
@@ -133,10 +133,6 @@ This site is fully configured and ready to deploy to Vercel:
 - **Netlify**: Supports Next.js with automatic deployments
 - **Cloudflare Pages**: Edge-optimized hosting
 - **Traditional VPS**: Run `npm run build` and `npm start`
-
-### Repository
-
-- **Bitbucket**: https://bitbucket.org/trukraft/stirring-dirt-excavation
 
 ## Browser Support
 

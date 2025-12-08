@@ -7,8 +7,8 @@
 1. **Connect Repository**
    - Go to [vercel.com](https://vercel.com)
    - Click "Add New Project"
-   - Import from Bitbucket: `trukraft/stirring-dirt-excavation`
-   - Authorize Vercel to access your Bitbucket account
+   - Import your repository
+   - Authorize Vercel to access your repository
 
 2. **Configure Project**
    - Framework Preset: **Next.js** (auto-detected)
@@ -100,5 +100,4 @@ After deployment, monitor at:
 - **Node Version**: 20.x (recommended)
 - **Package Manager**: npm
 - **Build Time**: ~90 seconds
-- **Repository**: https://bitbucket.org/trukraft/stirring-dirt-excavation
 

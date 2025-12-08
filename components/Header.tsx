@@ -38,7 +38,7 @@ export default function Header() {
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-base font-medium text-black"
+                className="text-base font-medium text-black hover:text-primary transition-colors duration-200"
               >
                 {item.name}
               </Link>
