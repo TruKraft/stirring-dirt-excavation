@@ -7,7 +7,7 @@ export default function Home() {
     {
       title: "Yard Preparation",
       description: "Expert land preparation for your next landscaping project. We ensure your yard is leveled, graded, and ready for whatever comes next.",
-      image: "https://images.unsplash.com/photo-1592595896551-12b371d546d5?q=80&w=2070",
+      image: "/yard.png",
       slug: "yard-preparation",
     },
     {
@@ -19,7 +19,7 @@ export default function Home() {
     {
       title: "Decorative Rock Work",
       description: "Beautiful decorative rock installations that add character and low-maintenance elegance to your landscape design.",
-      image: "/istockphoto-2155046393-612x612.jpg",
+      image: "/decorative-rock.png",
       slug: "decorative-rock-work",
     },
     {

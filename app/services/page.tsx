@@ -17,7 +17,7 @@ export default function Services() {
         "Drainage planning and implementation",
         "Foundation preparation for structures",
       ],
-      image: "https://images.unsplash.com/photo-1592595896551-12b371d546d5?q=80&w=2070",
+      image: "/yard.png",
       slug: "yard-preparation",
     },
     {
@@ -43,7 +43,7 @@ export default function Services() {
         "Multiple stone types and colors available",
         "Landscape fabric installation",
       ],
-      image: "/istockphoto-2155046393-612x612.jpg",
+      image: "/decorative-rock.png",
       slug: "decorative-rock-work",
     },
     {
