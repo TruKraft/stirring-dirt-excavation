@@ -14,7 +14,7 @@ export default function Header() {
   ];
 
   return (
-    <header className="bg-black sticky top-0 z-50 shadow-lg">
+    <header className="bg-white sticky top-0 z-50 shadow-lg">
       <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8" aria-label="Top">
         <div className="flex w-full items-center justify-between py-4 lg:py-6">
           {/* Logo/Brand */}
