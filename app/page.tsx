@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import AnchorLink from "@/components/AnchorLink";
+import ContactForm from "@/components/ContactForm";
 
 export default function Home() {
   const services = [
@@ -238,23 +239,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="bg-primary py-16">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl mb-4">
-            Ready to Get Started?
-          </h2>
-          <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-            Contact us today for a free quote. We&apos;ll discuss your project and provide honest, transparent pricing.
-          </p>
-          <a
-            href="tel:+1234567890"
-            className="inline-flex items-center justify-center rounded-md bg-white px-8 py-4 text-lg font-semibold text-primary shadow-lg hover:bg-gray-100 transition-all duration-200"
-          >
-            Call Now: (123) 456-7890
-          </a>
-        </div>
-      </section>
+      {/* Contact Form Section */}
+      <ContactForm />
     </>
   );
 }
