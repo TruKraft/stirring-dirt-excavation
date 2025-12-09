@@ -5,12 +5,10 @@
 @layer base {
   html {
     scroll-behavior: smooth;
-    margin: 0;
-    padding: 0;
   }
   
   body {
-    @apply bg-white text-gray-900 m-0 p-0;
+    @apply bg-white text-gray-900;
   }
 }
 
@@ -18,5 +16,44 @@
   .text-balance {
     text-wrap: balance;
   }
+}
+
+/* LeadConnector Form Widget - Hide scroll arrows when minimized */
+#polite-slide-in-right-EqxDPyRergldTPAsq5QX[data-minimized="true"] ~ *,
+div[id*="polite-slide-in-right-EqxDPyRergldTPAsq5QX"] [class*="scroll"],
+div[id*="polite-slide-in-right-EqxDPyRergldTPAsq5QX"] [class*="arrow"],
+div[id*="EqxDPyRergldTPAsq5QX"] [class*="scroll"],
+div[id*="EqxDPyRergldTPAsq5QX"] [class*="arrow"],
+[data-form-id="EqxDPyRergldTPAsq5QX"] [class*="scroll"],
+[data-form-id="EqxDPyRergldTPAsq5QX"] [class*="arrow"] {
+  display: none !important;
+}
+
+/* Hide scroll indicators/arrows in minimized state */
+.leadconnector-widget[data-minimized="true"] [class*="scroll"],
+.leadconnector-widget[data-minimized="true"] [class*="arrow"],
+.leadconnector-minimized-tab [class*="scroll"],
+.leadconnector-minimized-tab [class*="arrow"],
+button[aria-label*="Contact"] ~ [class*="scroll"],
+button[aria-label*="Contact"] ~ [class*="arrow"] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
+
+/* Target scrollbar and scroll indicators */
+div[id*="polite-slide-in-right-EqxDPyRergldTPAsq5QX"]::-webkit-scrollbar,
+div[id*="EqxDPyRergldTPAsq5QX"]::-webkit-scrollbar,
+[data-form-id="EqxDPyRergldTPAsq5QX"]::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+/* Hide any scroll-related elements */
+div[id*="polite-slide-in-right-EqxDPyRergldTPAsq5QX"] [role="scrollbar"],
+div[id*="EqxDPyRergldTPAsq5QX"] [role="scrollbar"],
+[data-form-id="EqxDPyRergldTPAsq5QX"] [role="scrollbar"] {
+  display: none !important;
 }
 
