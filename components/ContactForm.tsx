@@ -51,6 +51,30 @@ export default function ContactForm() {
     };
   }, []);
 
+  // Apply styles after widget loads to hide scrollbars
+  useEffect(() => {
+    const applyScrollbarStyles = () => {
+      const widgetElements = document.querySelectorAll('[id*="polite-slide-in-right-EqxDPyRergldTPAsq5QX"], [id*="EqxDPyRergldTPAsq5QX"], [data-form-id="EqxDPyRergldTPAsq5QX"]');
+      widgetElements.forEach((element) => {
+        if (element instanceof HTMLElement) {
+          element.style.scrollbarWidth = 'none';
+          (element.style as any).msOverflowStyle = 'none';
+          element.style.overscrollBehavior = 'contain';
+        }
+      });
+    };
+
+    // Apply immediately and after a delay to catch dynamically created elements
+    applyScrollbarStyles();
+    const timeoutId = setTimeout(applyScrollbarStyles, 1000);
+    const intervalId = setInterval(applyScrollbarStyles, 2000);
+
+    return () => {
+      clearTimeout(timeoutId);
+      clearInterval(intervalId);
+    };
+  }, []);
+
   return (
     <>
       <style dangerouslySetInnerHTML={{
@@ -76,23 +100,60 @@ export default function ContactForm() {
             overflow: hidden !important;
           }
           
-          /* Hide scrollbar in minimized state */
+          /* Completely hide all scrollbars - Webkit browsers */
           div[id*="polite-slide-in-right-EqxDPyRergldTPAsq5QX"]::-webkit-scrollbar,
-          div[id*="EqxDPyRergldTPAsq5QX"]::-webkit-scrollbar {
+          div[id*="EqxDPyRergldTPAsq5QX"]::-webkit-scrollbar,
+          [data-form-id="EqxDPyRergldTPAsq5QX"]::-webkit-scrollbar,
+          .leadconnector-widget::-webkit-scrollbar,
+          .leadconnector-minimized-tab::-webkit-scrollbar {
             display: none !important;
             width: 0 !important;
             height: 0 !important;
+            background: transparent !important;
           }
           
-          /* Target any sibling elements that might be scroll indicators */
-          #polite-slide-in-right-EqxDPyRergldTPAsq5QX ~ * {
-            pointer-events: none;
+          /* Hide scrollbar track and thumb */
+          div[id*="polite-slide-in-right-EqxDPyRergldTPAsq5QX"]::-webkit-scrollbar-track,
+          div[id*="polite-slide-in-right-EqxDPyRergldTPAsq5QX"]::-webkit-scrollbar-thumb,
+          div[id*="EqxDPyRergldTPAsq5QX"]::-webkit-scrollbar-track,
+          div[id*="EqxDPyRergldTPAsq5QX"]::-webkit-scrollbar-thumb,
+          [data-form-id="EqxDPyRergldTPAsq5QX"]::-webkit-scrollbar-track,
+          [data-form-id="EqxDPyRergldTPAsq5QX"]::-webkit-scrollbar-thumb {
+            display: none !important;
+            background: transparent !important;
+          }
+          
+          /* Hide scrollbars - Firefox */
+          div[id*="polite-slide-in-right-EqxDPyRergldTPAsq5QX"],
+          div[id*="EqxDPyRergldTPAsq5QX"],
+          [data-form-id="EqxDPyRergldTPAsq5QX"],
+          .leadconnector-widget,
+          .leadconnector-minimized-tab {
+            scrollbar-width: none !important;
+            -ms-overflow-style: none !important;
+          }
+          
+          /* Prevent sticky scroll behavior - fix overflow and touch */
+          div[id*="polite-slide-in-right-EqxDPyRergldTPAsq5QX"],
+          div[id*="EqxDPyRergldTPAsq5QX"],
+          [data-form-id="EqxDPyRergldTPAsq5QX"] {
+            overflow-x: hidden !important;
+            overflow-y: auto !important;
+            -webkit-overflow-scrolling: touch !important;
+            touch-action: pan-y !important;
           }
           
           /* Ensure minimized button doesn't have scroll indicators */
           div[id*="polite-slide-in-right-EqxDPyRergldTPAsq5QX"] button,
-          div[id*="EqxDPyRergldTPAsq5QX"] button {
+          div[id*="EqxDPyRergldTPAsq5QX"] button,
+          [data-form-id="EqxDPyRergldTPAsq5QX"] button {
             overflow: hidden !important;
+            touch-action: manipulation !important;
+          }
+          
+          /* Prevent scroll event interference */
+          #polite-slide-in-right-EqxDPyRergldTPAsq5QX {
+            overscroll-behavior: contain !important;
           }
         `
       }} />
