@@ -74,11 +74,10 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: "/stirring dirt-logo.png" },
-      { url: "/stirring dirt-logo.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon.svg", type: "image/svg+xml" },
     ],
     apple: [
-      { url: "/stirring dirt-logo.png" },
+      { url: "/favicon.svg", type: "image/svg+xml" },
     ],
   },
 };
