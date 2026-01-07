@@ -1,22 +1,59 @@
 "use client";
 
-import { useEffect } from "react";
+import { useState } from "react";
 
 export default function ContactForm() {
-  useEffect(() => {
-    // Load the external form script
-    const script = document.createElement("script");
-    script.src = "https://link.msgsndr.com/js/form_embed.js";
-    script.async = true;
-    document.body.appendChild(script);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    service: "",
+    message: "",
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<{
+    type: "success" | "error" | null;
+    message: string;
+  }>({ type: null, message: "" });
 
-    return () => {
-      // Cleanup script on unmount
-      if (document.body.contains(script)) {
-        document.body.removeChild(script);
-      }
-    };
-  }, []);
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+  ) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus({ type: null, message: "" });
+
+    try {
+      // TODO: Replace with your actual form submission endpoint
+      await new Promise((resolve) => setTimeout(resolve, 1000)); // Simulated delay
+      
+      setSubmitStatus({
+        type: "success",
+        message: "Thank you! We'll get back to you soon.",
+      });
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        service: "",
+        message: "",
+      });
+    } catch (error) {
+      setSubmitStatus({
+        type: "error",
+        message: "Something went wrong. Please try again or call us directly.",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return (
     <section className="bg-dark py-16 lg:py-24">
@@ -120,31 +157,120 @@ export default function ContactForm() {
               Request a Quote
             </h3>
 
-            {/* External Form Iframe */}
-            <div className="relative w-full" style={{ minHeight: "635px" }}>
-              <iframe
-                src="https://api.leadconnectorhq.com/widget/form/EqxDPyRergldTPAsq5QX"
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  border: "none",
-                  borderRadius: "4px",
-                }}
-                id="inline-EqxDPyRergldTPAsq5QX"
-                data-layout='{"id":"INLINE"}'
-                data-trigger-type="alwaysShow"
-                data-trigger-value=""
-                data-activation-type="alwaysActivated"
-                data-activation-value=""
-                data-deactivation-type="neverDeactivate"
-                data-deactivation-value=""
-                data-form-name="SDE - Contact Form"
-                data-height="635"
-                data-layout-iframe-id="inline-EqxDPyRergldTPAsq5QX"
-                data-form-id="EqxDPyRergldTPAsq5QX"
-                title="SDE - Contact Form"
-              />
-            </div>
+            <form onSubmit={handleSubmit} className="space-y-4">
+              {/* Name */}
+              <div>
+                <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
+                  Full Name <span className="text-primary">*</span>
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  required
+                  value={formData.name}
+                  onChange={handleChange}
+                  className="w-full px-4 py-3 bg-dark border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+                  placeholder="John Doe"
+                />
+              </div>
+
+              {/* Email */}
+              <div>
+                <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
+                  Email <span className="text-primary">*</span>
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  value={formData.email}
+                  onChange={handleChange}
+                  className="w-full px-4 py-3 bg-dark border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+                  placeholder="john@example.com"
+                />
+              </div>
+
+              {/* Phone */}
+              <div>
+                <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">
+                  Phone <span className="text-primary">*</span>
+                </label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  required
+                  value={formData.phone}
+                  onChange={handleChange}
+                  className="w-full px-4 py-3 bg-dark border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+                  placeholder="(208) 555-0123"
+                />
+              </div>
+
+              {/* Service */}
+              <div>
+                <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">
+                  Service Needed
+                </label>
+                <select
+                  id="service"
+                  name="service"
+                  value={formData.service}
+                  onChange={handleChange}
+                  className="w-full px-4 py-3 bg-dark border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+                >
+                  <option value="">Select a service</option>
+                  <option value="yard-preparation">Yard Preparation</option>
+                  <option value="sod-installation">Sod Installation</option>
+                  <option value="decorative-rock">Decorative Rock Work</option>
+                  <option value="driveway-grading">Driveway Grading & Gravel Restoration</option>
+                  <option value="demolition">Demolition</option>
+                  <option value="junk-removal">Junk Removal & Hauling</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+
+              {/* Message */}
+              <div>
+                <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
+                  Project Details <span className="text-primary">*</span>
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  required
+                  rows={5}
+                  value={formData.message}
+                  onChange={handleChange}
+                  className="w-full px-4 py-3 bg-dark border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all resize-none"
+                  placeholder="Tell us about your project..."
+                />
+              </div>
+
+              {/* Submit Status */}
+              {submitStatus.type && (
+                <div
+                  className={`p-4 rounded-lg ${
+                    submitStatus.type === "success"
+                      ? "bg-green-900/30 border border-green-700 text-green-300"
+                      : "bg-red-900/30 border border-red-700 text-red-300"
+                  }`}
+                >
+                  {submitStatus.message}
+                </div>
+              )}
+
+              {/* Submit Button */}
+              <button
+                type="submit"
+                disabled={isSubmitting}
+                className="w-full bg-primary hover:bg-primary-dark text-white font-semibold py-4 px-6 rounded-lg transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                {isSubmitting ? "Sending..." : "Request a Quote"}
+              </button>
+            </form>
           </div>
         </div>
       </div>
