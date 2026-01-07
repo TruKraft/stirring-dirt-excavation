@@ -20,7 +20,7 @@ export default function Footer() {
               <h3 className="text-lg font-bold">Stirring Dirt Excavation</h3>
             </div>
             <p className="text-gray-400 mb-4">
-              Honest, reliable excavation services in Logan, Utah. Family-owned and operated with a commitment to quality workmanship.
+              Honest, reliable excavation services in Northern Utah and Southern Idaho. Family-owned and operated with a commitment to quality workmanship.
             </p>
             <p className="text-sm text-gray-500">
               © {new Date().getFullYear()} Stirring Dirt Excavation. All rights reserved.
@@ -73,7 +73,7 @@ export default function Footer() {
                     d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
                   />
                 </svg>
-                <span className="text-gray-400">Logan, Utah</span>
+                <span className="text-gray-400">Northern Utah & Southern Idaho</span>
               </li>
               <li className="flex items-start space-x-3">
                 <svg
@@ -89,8 +89,8 @@ export default function Footer() {
                     d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
                   />
                 </svg>
-                <a href="tel:+1234567890" className="text-gray-400 hover:text-primary transition-colors">
-                  (123) 456-7890
+                <a href="tel:+12088510122" className="text-gray-400 hover:text-primary transition-colors">
+                  (208) 851-0122
                 </a>
               </li>
               <li className="flex items-start space-x-3">

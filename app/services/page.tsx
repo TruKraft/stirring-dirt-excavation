@@ -2,7 +2,45 @@ import Image from "next/image";
 
 export const metadata = {
   title: "Services | Stirring Dirt Excavation",
-  description: "Professional excavation services in Logan, Utah including yard preparation, sod installation, grading, demolition, and more.",
+  description: "Professional excavation services in Northern Utah and Southern Idaho including yard preparation, sod installation, grading, demolition, and more. Serving Logan, Preston, Ogden and surrounding areas.",
+  keywords: [
+    "excavation services",
+    "yard preparation",
+    "sod installation",
+    "decorative rock work",
+    "driveway grading",
+    "gravel restoration",
+    "demolition services",
+    "junk removal",
+    "hauling services",
+    "landscaping services Northern Utah",
+    "excavation Southern Idaho",
+    "Logan yard services",
+    "Preston excavation",
+    "Ogden landscaping",
+  ],
+  alternates: {
+    canonical: "/services",
+  },
+  openGraph: {
+    title: "Services | Stirring Dirt Excavation",
+    description: "Professional excavation services including yard prep, sod installation, grading, demolition, and more in Northern Utah and Southern Idaho.",
+    url: "https://stirringdirtexcavation.com/services",
+    images: [
+      {
+        url: "/stirring dirt-logo.png",
+        width: 1200,
+        height: 630,
+        alt: "Stirring Dirt Excavation Logo",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Services | Stirring Dirt Excavation",
+    description: "Professional excavation services in Northern Utah and Southern Idaho.",
+  },
 };
 
 export default function Services() {
@@ -97,7 +135,7 @@ export default function Services() {
               Our Services
             </h1>
             <p className="text-xl text-gray-300">
-              Comprehensive excavation and landscaping services for residential and commercial projects in Logan, Utah and surrounding areas.
+              Comprehensive excavation and landscaping services for residential and commercial projects in Northern Utah and Southern Idaho, including Logan, Preston, Ogden and surrounding areas.
             </p>
           </div>
         </div>
@@ -219,10 +257,10 @@ export default function Services() {
             Contact us today for a free quote. We&apos;re ready to help bring your vision to life.
           </p>
           <a
-            href="tel:+1234567890"
+            href="tel:+12088510122"
             className="inline-flex items-center justify-center rounded-md bg-primary px-8 py-4 text-lg font-semibold text-white shadow-lg hover:bg-primary-dark transition-all duration-200"
           >
-            Call Now: (123) 456-7890
+            Call Now: (208) 851-0122
           </a>
         </div>
       </section>

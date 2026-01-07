@@ -1,71 +1,22 @@
 "use client";
 
-import { useState, FormEvent } from "react";
+import { useEffect } from "react";
 
 export default function ContactForm() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    message: "",
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<{
-    type: "success" | "error" | null;
-    message: string;
-  }>({ type: null, message: "" });
+  useEffect(() => {
+    // Load the external form script
+    const script = document.createElement("script");
+    script.src = "https://link.msgsndr.com/js/form_embed.js";
+    script.async = true;
+    document.body.appendChild(script);
 
-  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    setSubmitStatus({ type: null, message: "" });
-
-    try {
-      // Submit to LeadConnector API
-      const response = await fetch(
-        "https://api.leadconnectorhq.com/widget/form/EqxDPyRergldTPAsq5QX/submit",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            name: formData.name,
-            email: formData.email,
-            phone: formData.phone,
-            message: formData.message,
-          }),
-        }
-      );
-
-      if (response.ok) {
-        setSubmitStatus({
-          type: "success",
-          message: "Thank you! We'll get back to you soon.",
-        });
-        // Reset form
-        setFormData({ name: "", email: "", phone: "", message: "" });
-      } else {
-        throw new Error("Failed to submit form");
+    return () => {
+      // Cleanup script on unmount
+      if (document.body.contains(script)) {
+        document.body.removeChild(script);
       }
-    } catch (error) {
-      setSubmitStatus({
-        type: "error",
-        message: "Something went wrong. Please try calling us directly.",
-      });
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
-
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
+    };
+  }, []);
 
   return (
     <section className="bg-dark py-16 lg:py-24">
@@ -111,10 +62,10 @@ export default function ContactForm() {
                 <div>
                   <h4 className="text-lg font-semibold text-white mb-1">Phone</h4>
                   <a
-                    href="tel:+1234567890"
+                    href="tel:+12088510122"
                     className="text-xl text-white hover:text-primary transition-colors block"
                   >
-                    (123) 456-7890
+                    (208) 851-0122
                   </a>
                   <p className="text-sm text-gray-400 mt-1">Mon-Fri 8am-6pm</p>
                 </div>
@@ -158,7 +109,7 @@ export default function ContactForm() {
             <div className="pt-6 border-t border-gray-800">
               <h4 className="text-xl font-semibold text-white mb-3">Service Area</h4>
               <p className="text-gray-300">
-                Proudly serving Logan and the surrounding Utah region. Call to confirm service availability in your area.
+                Proudly serving Northern Utah and Southern Idaho regions, including Logan, Preston, Ogden, and surrounding areas. Call to confirm service availability in your area.
               </p>
             </div>
           </div>
@@ -169,97 +120,31 @@ export default function ContactForm() {
               Request a Quote
             </h3>
 
-            <form onSubmit={handleSubmit} className="space-y-5">
-              {/* Name Field */}
-              <div>
-                <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
-                  Name
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  required
-                  className="w-full px-4 py-3 bg-dark border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-200"
-                  placeholder="Your name"
-                />
-              </div>
-
-              {/* Email Field */}
-              <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
-                  Email
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  required
-                  className="w-full px-4 py-3 bg-dark border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-200"
-                  placeholder="your.email@example.com"
-                />
-              </div>
-
-              {/* Phone Field */}
-              <div>
-                <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">
-                  Phone
-                </label>
-                <input
-                  type="tel"
-                  id="phone"
-                  name="phone"
-                  value={formData.phone}
-                  onChange={handleChange}
-                  required
-                  className="w-full px-4 py-3 bg-dark border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-200"
-                  placeholder="(123) 456-7890"
-                />
-              </div>
-
-              {/* Message Field */}
-              <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
-                  Message
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  required
-                  rows={4}
-                  className="w-full px-4 py-3 bg-dark border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-200 resize-none"
-                  placeholder="Tell us about your project..."
-                />
-              </div>
-
-              {/* Submit Button */}
-              <button
-                type="submit"
-                disabled={isSubmitting}
-                className="w-full bg-primary hover:bg-primary-dark text-white font-semibold py-4 px-6 rounded-lg transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed shadow-lg hover:shadow-xl"
-              >
-                {isSubmitting ? "Sending..." : "Send Message"}
-              </button>
-
-              {/* Status Messages */}
-              {submitStatus.type && (
-                <div
-                  className={`p-4 rounded-lg ${
-                    submitStatus.type === "success"
-                      ? "bg-green-500/10 border border-green-500/20 text-green-400"
-                      : "bg-red-500/10 border border-red-500/20 text-red-400"
-                  }`}
-                >
-                  {submitStatus.message}
-                </div>
-              )}
-            </form>
+            {/* External Form Iframe */}
+            <div className="relative w-full" style={{ minHeight: "635px" }}>
+              <iframe
+                src="https://api.leadconnectorhq.com/widget/form/EqxDPyRergldTPAsq5QX"
+                style={{
+                  width: "100%",
+                  height: "100%",
+                  border: "none",
+                  borderRadius: "4px",
+                }}
+                id="inline-EqxDPyRergldTPAsq5QX"
+                data-layout='{"id":"INLINE"}'
+                data-trigger-type="alwaysShow"
+                data-trigger-value=""
+                data-activation-type="alwaysActivated"
+                data-activation-value=""
+                data-deactivation-type="neverDeactivate"
+                data-deactivation-value=""
+                data-form-name="SDE - Contact Form"
+                data-height="635"
+                data-layout-iframe-id="inline-EqxDPyRergldTPAsq5QX"
+                data-form-id="EqxDPyRergldTPAsq5QX"
+                title="SDE - Contact Form"
+              />
+            </div>
           </div>
         </div>
       </div>

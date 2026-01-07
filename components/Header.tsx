@@ -44,7 +44,7 @@ export default function Header() {
               </Link>
             ))}
             <a
-              href="tel:+1234567890"
+              href="tel:+12088510122"
               className="inline-flex items-center justify-center rounded-md bg-primary px-6 py-3 text-base font-semibold text-white shadow-sm hover:bg-primary-dark transition-all duration-200"
             >
               Call Now
@@ -107,7 +107,7 @@ export default function Header() {
                 </Link>
               ))}
               <a
-                href="tel:+1234567890"
+                href="tel:+12088510122"
                 className="block rounded-lg bg-primary px-3 py-2.5 text-center text-base font-semibold text-white hover:bg-primary-dark"
               >
                 Call Now

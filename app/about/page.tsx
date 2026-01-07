@@ -2,7 +2,38 @@ import Image from "next/image";
 
 export const metadata = {
   title: "About Us | Stirring Dirt Excavation",
-  description: "Learn about Colton Boyack and Stirring Dirt Excavation - honest, reliable excavation services in Logan, Utah.",
+  description: "Learn about Colton Boyack and Stirring Dirt Excavation - honest, reliable excavation services in Northern Utah and Southern Idaho, serving Logan, Preston, Ogden and beyond.",
+  keywords: [
+    "about Stirring Dirt Excavation",
+    "Colton Boyack excavation",
+    "family-owned excavation",
+    "Northern Utah contractor",
+    "Southern Idaho excavation",
+    "Logan excavation company",
+    "excavation values",
+  ],
+  alternates: {
+    canonical: "/about",
+  },
+  openGraph: {
+    title: "About Us | Stirring Dirt Excavation",
+    description: "Learn about Colton Boyack and our family-owned excavation business serving Northern Utah and Southern Idaho.",
+    url: "https://stirringdirtexcavation.com/about",
+    images: [
+      {
+        url: "/stirring dirt-logo.png",
+        width: 1200,
+        height: 630,
+        alt: "Stirring Dirt Excavation Logo",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About Us | Stirring Dirt Excavation",
+    description: "Learn about Colton Boyack and our family-owned excavation business.",
+  },
 };
 
 export default function About() {
@@ -40,10 +71,10 @@ export default function About() {
               </h2>
               <div className="space-y-4 text-lg text-gray-600">
                 <p>
-                  Stirring Dirt Excavation is more than just a business—it&apos;s a commitment to serving the Logan, Utah community with integrity and excellence. Owner and operator Colton Boyack started this company with a simple philosophy: do honest work at fair prices, and always treat customers with respect.
+                  Stirring Dirt Excavation is more than just a business—it&apos;s a commitment to serving Northern Utah and Southern Idaho communities with integrity and excellence. Owner and operator Colton Boyack started this company with a simple philosophy: do honest work at fair prices, and always treat customers with respect.
                 </p>
                 <p>
-                  Growing up in Cache Valley, Colton learned the value of hard work and community from an early age. Those lessons shaped his approach to business. When you hire Stirring Dirt Excavation, you&apos;re not getting a faceless corporation—you&apos;re working directly with Colton, who takes personal responsibility for every project.
+                  With deep roots in the region, Colton learned the value of hard work and community from an early age. Those lessons shaped his approach to business. When you hire Stirring Dirt Excavation, you&apos;re not getting a faceless corporation—you&apos;re working directly with Colton, who takes personal responsibility for every project.
                 </p>
                 <p>
                   By keeping the business lean and avoiding unnecessary overhead, Colton can offer competitive pricing without sacrificing quality. He operates the equipment himself, oversees every job personally, and ensures that the work meets his exacting standards before calling it complete.
@@ -119,7 +150,7 @@ export default function About() {
                 <h3 className="text-2xl font-bold text-gray-900">Community Focus</h3>
               </div>
               <p className="text-gray-600">
-                We&apos;re proud to serve Logan and the surrounding Cache Valley area. This is our home, and your neighbors are our neighbors. We&apos;re invested in the success and beauty of our community, and we treat every property as if it were our own.
+                We&apos;re proud to serve Northern Utah and Southern Idaho, including Logan, Preston, Ogden and surrounding communities. These are our neighbors, and we&apos;re invested in the success and beauty of our region. We treat every property as if it were our own.
               </p>
             </div>
           </div>
@@ -131,10 +162,10 @@ export default function About() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl mb-4">
-              Serving Logan and Cache Valley
+              Serving Northern Utah and Southern Idaho
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              We&apos;re proud to provide excavation services throughout Cache Valley and the surrounding areas. From Logan to the surrounding communities, we&apos;re here to help.
+              We&apos;re proud to provide excavation services throughout Northern Utah and Southern Idaho regions. From Logan to Preston, Ogden and beyond, we&apos;re here to help.
             </p>
           </div>
 
@@ -187,10 +218,10 @@ export default function About() {
             Ready to work with a contractor who puts honesty and quality first? Let&apos;s talk about your project.
           </p>
           <a
-            href="tel:+1234567890"
+            href="tel:+12088510122"
             className="inline-flex items-center justify-center rounded-md bg-white px-8 py-4 text-lg font-semibold text-primary shadow-lg hover:bg-gray-100 transition-all duration-200"
           >
-            Call Now: (123) 456-7890
+            Call Now: (208) 851-0122
           </a>
         </div>
       </section>

@@ -73,7 +73,7 @@ export default function Home() {
     },
     {
       title: "Community-Oriented",
-      description: "Proud to serve Logan and the surrounding areas. Your neighbors are our neighbors.",
+      description: "Proud to serve Northern Utah and Southern Idaho. Your neighbors are our neighbors.",
       icon: (
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
@@ -102,11 +102,11 @@ export default function Home() {
               <span className="block text-primary">Done Right</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl">
-              Family-owned excavation services in Logan, Utah. From yard preparation to demolition, we deliver quality workmanship with integrity and reliability.
+              Family-owned excavation services serving Northern Utah and Southern Idaho. From yard preparation to demolition, we deliver quality workmanship with integrity and reliability.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a
-                href="tel:+1234567890"
+                href="tel:+12088510122"
                 className="inline-flex items-center justify-center rounded-md bg-primary px-8 py-4 text-lg font-semibold text-white shadow-lg hover:bg-primary-dark transition-all duration-200"
               >
                 Call for a Free Quote
