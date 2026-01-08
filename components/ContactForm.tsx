@@ -31,8 +31,17 @@ export default function ContactForm() {
     setSubmitStatus({ type: null, message: "" });
 
     try {
-      // TODO: Replace with your actual form submission endpoint
-      await new Promise((resolve) => setTimeout(resolve, 1000)); // Simulated delay
+      const response = await fetch("https://forms.getaltira.com/api/f/website-contact-form-ee7a4403", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
       
       setSubmitStatus({
         type: "success",
@@ -46,6 +55,7 @@ export default function ContactForm() {
         message: "",
       });
     } catch (error) {
+      console.error("Form submission error:", error);
       setSubmitStatus({
         type: "error",
         message: "Something went wrong. Please try again or call us directly.",
