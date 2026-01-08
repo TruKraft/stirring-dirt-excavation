@@ -31,7 +31,7 @@ export default function ContactForm() {
     setSubmitStatus({ type: null, message: "" });
 
     try {
-      const response = await fetch("https://forms.getaltira.com/api/f/website-contact-form-ee7a4403", {
+      const response = await fetch("https://forms.getaltira.com/api/f/website-contact-form-a26c6bbf", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
